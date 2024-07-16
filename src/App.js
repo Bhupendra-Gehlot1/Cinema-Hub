@@ -10,7 +10,6 @@ import Search from "./Pages/Search/Search";
 import Recommendation from "./Pages/Recommendation/Recommendation";
 import KNearestMovies from "./Pages/Recommendation/KNearestMovies"
 import { Container } from "@material-ui/core";
-import {userData} from "./Pages/Recommendation/Data/userData";
 
 function App() {
   

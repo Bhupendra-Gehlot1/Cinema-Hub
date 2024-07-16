@@ -1,6 +1,5 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import { userData } from './Data/userData';
-import SingleContent from '../../components/SingleContent/SingleContent.js';
 import ShowMovies from './ShowMovies'
 
 
@@ -64,7 +63,7 @@ const KNearestMovies = ({newUserRatings}) => {
   
 
   var notSeen = [];
-  for(var i = 0; i<newUser.movie.length/2; ++i){
+  for(let i = 0; i<newUser.movie.length/2; ++i){
       if(newUser.movie[i].rating===-1){
         notSeen.push(newUser.movie[i].movId);
       }
@@ -74,7 +73,7 @@ const KNearestMovies = ({newUserRatings}) => {
   const movies = newUser.movie;
   let predictedRating = []
   let allPredictions = {}
-  for(var i = 0; i<movies.length; ++i){
+  for(let i = 0; i<movies.length; ++i){
       const id = movies[i].movId;
       const title = movies[i].title;
       if(id===notSeen[idx]){
